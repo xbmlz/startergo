@@ -1,0 +1,26 @@
+package layouts
+
+import (
+    "github.com/xbmlz/startergo/views/components"
+)
+
+templ Base() {
+    <!DOCTYPE html>
+    <html lang="en" data-theme="dark">
+        <head>
+            <title>StarterGo</title>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="stylesheet" href="/public/styles.css" />
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+            <script src="https://unpkg.com/alpinejs"></script>
+            <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+        </head>
+
+        <body class="antialiased">
+            @components.Navigation()
+            { children... }
+        </body>
+    </html>
+}
+
